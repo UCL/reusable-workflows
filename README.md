@@ -19,7 +19,7 @@ to be useful across multiple repositories in the UCL organization.
 
 Reusable workflows serve a similar purpose to another GitHub Actions feature [_composite actions_](https://github.blog/changelog/2021-08-25-github-actions-reduce-duplication-with-action-composition/)
 which also help to avoid repetition in workflow files by factoring out actions in to a callable module. 
-Composite actions and resusable workflows each have some limitations that can make one more appropriate than
+Composite actions and reusable workflows each have some limitations that can make one more appropriate than
 the other in specific circumstances - see [this guide on the GitHub blog for more guidance](https://github.blog/2022-02-10-using-reusable-workflows-github-actions/#Reusable_workflows_vs._composite_actions).
 
 ## Using a workflow
@@ -41,7 +41,7 @@ where
 
   * `{job-id}` is the unique (within the particular workflow jobs list) name to give the reusable workflow call job (see [descriptions of constraints on allowable names here](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_id));
   * `{name-of-workflow-file}` is the name of the `.yml` file in the [`.github/workflows`](.github/workflows) directory in this repository you wish to call;
-  * `{tag-or-branch}` is the name of a [branch](https://github.com/UCL/resusable-workflows/branches) or [tag](https://github.com/UCL/resusable-workflows/tags) in this repository containing the version of the workflow file you wish to call, for example set to `main` to use the latest version on the `main` branch;
+  * `{tag-or-branch}` is the name of a [branch](https://github.com/UCL/reusable-workflows/branches) or [tag](https://github.com/UCL/reusable-workflows/tags) in this repository containing the version of the workflow file you wish to call, for example set to `main` to use the latest version on the `main` branch;
   * `{input-values-list}` is an optional list of the input values to pass to the workflow (see [description of syntax here](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idwith)), if no inputs are to be passed the `with` section should be omitted;
   * `{secret-values-list}` is an optional list of the secrets to pass to the workflow (see [description of syntax here](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsecrets)), if no inputs are to be passed the `secrets` section should be omitted.
   
@@ -50,7 +50,7 @@ There optionally may be other jobs in the job list specified by the `jobs` prope
 
 ## Adding a new workflow
 
-To add a new reusable workflow please [open a pull request](https://github.com/UCL/resusable-workflows/compare). 
+To add a new reusable workflow please [open a pull request](https://github.com/UCL/reusable-workflows/compare). 
 The workflow YAML file __must__ be placed in the `.github/workflows` directory. 
 It should be given a descriptive name in all lowercase with hyphens as the word separator for example `an-example-reusable-workflow.yml`.
 
